@@ -1,0 +1,21 @@
+#동적 변수 딕셔너리 이용해서 편하게 하는 방법
+my_list = ['var1', 'var2', 'var3']
+variables = {}
+
+for i in my_list:
+    variables[i] = 2
+
+print(variables['var1'])  # 출력: Value of var1
+print(variables['var2'])  # 출력: Value of var2
+print(variables['var3'])  # 출력: Value of var3
+
+
+# 딕셔너리 변수 초기화(선언) 귀찮을떄 하는 방법
+from collections import defaultdict
+
+counts = defaultdict(int)
+
+counts['x'] += 1
+counts['y'] += 2
+
+print(counts) 
